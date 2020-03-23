@@ -1,0 +1,9 @@
+def_q_arg_none["QNOP"]       = 0x00
+def_q_arg_st["test_CW_00"]   = 0x68
+def_q_arg_st["test_CW_01"]   = 0x69
+def_q_arg_st["test_CW_02"]   = 0x6a
+def_q_arg_st["test_CW_03"]   = 0x6b
+def_q_arg_st["test_CW_04"]   = 0x6c
+def_q_arg_st["test_CW_05"]   = 0x6d
+def_q_arg_st["test_CW_06"]   = 0x6e
+def_q_arg_st["test_CW_07"]   = 0x6f

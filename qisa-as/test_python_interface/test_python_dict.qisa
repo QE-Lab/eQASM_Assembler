@@ -1,0 +1,27 @@
+# This assembly program uses some imaginary quantum instructions.
+
+# The instructions in here are non-sensical; this file is only used to
+# demonstrate the functionality of loading new quantum instructions into
+# QISA-AS.
+
+# The new quantum instructions can be loaded using Python interface
+# function 'setQuantumInstructions()', or when using the qisa-as
+# executable, by specifying command-line option '-q'.
+
+# Once the new quantum instructions have been loaded into QISA-AS, this
+# file can be assembled.
+
+ .register s9 all_qubits
+ .register t5 combi_2
+
+ SMIS       s5, {1, 4, 6}
+ SMIS       all_qubits,    0b1111111
+ SMIT       t5, {(3,1), (5,2)}
+
+QINSTR_NO_ARGS
+
+bs 1 QINSTR_ST_001 s0
+bs 2 QINSTR_ST_001 s0 | QINSTR_ST_002 s1
+3 QINSTR_ST_001 all_qubits | C,QINSTR_ST_002 s1 | QINSTR_TT_001 combi_2
+
+QINSTR_ST_001 s0 | QINSTR_ST_002 s1 | QINSTR_TT_002 t63 | QINSTR_ST_003 s6

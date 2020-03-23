@@ -1,0 +1,19 @@
+# select qubit 0, 2
+# assume x = 0,1 is the solution to f(x)=1
+
+.def_sym init_waiting_time  10000
+.def_sym msmt_duration      15
+
+.register s7  both_qubits
+smis both_qubits, {0, 2}
+
+smit t0, {(0, 2)}
+
+    QWAIT   init_waiting_time   # initialize all qubits
+    Y90     both_qubits
+    cU01    t0
+2,  Y90     both_qubits
+    cU00    t0
+2,  Y90     both_qubits
+    MeasZ   both_qubits
+

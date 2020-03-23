@@ -1,0 +1,30 @@
+# This quantum instruction definition file defines some imaginary quantum
+# instructions and their opcodes.
+
+# The instructions in here are non-sensical; this file is only used to
+# demonstrate the functionality of loading new quantum instructions into
+# QISA-AS.
+
+# This file can be loaded using Python interface function
+# 'setQuantumInstructions()', or when using the qisa-as executable,
+# by specifying command-line option '-q'.
+
+# Once this file has been loaded into QISA-AS, the file
+# 'test_python_dict.qisa' in this directory can be assembled.
+
+# No arguments
+# (def_q_arg_none)
+def_q_arg_none['QINSTR_NOP']     = 0x00
+def_q_arg_none['QINSTR_NO_ARGS'] = 0x01
+
+# Uses 'S' register as parameter
+# (def_q_arg_st)
+def_q_arg_st['QINSTR_ST_001']    = 0x0a
+def_q_arg_st['QINSTR_ST_002']    = 0x0b
+def_q_arg_st['QINSTR_ST_003']    = 0x0c
+
+# Uses 'T' register as parameter
+# (def_q_arg_tt)
+def_q_arg_tt['QINSTR_TT_001']    = 0x14
+def_q_arg_tt['QINSTR_TT_002']    = 0x15
+def_q_arg_tt['QINSTR_TT_003']    = 0x16

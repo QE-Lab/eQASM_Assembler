@@ -1,0 +1,17 @@
+#
+# Configured quantum instructions
+# (Double Instruction Format)
+#
+
+# No arguments
+# (def_q_arg_none)
+def_q_arg_none['QNOP']        = 0x00
+
+# Uses 'S' register as parameter
+# (def_q_arg_st)
+def_q_arg_st['CW_01']         = 0x01
+def_q_arg_st['PrepZ']         = 0x03
+
+# Uses 'T' register as parameter
+# (def_q_arg_tt)
+def_q_arg_tt['CZ']            = 0x81
